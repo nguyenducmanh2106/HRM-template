@@ -1,0 +1,10 @@
+{
+  "AcademicRank": {
+    "Proc_Grid": "AcademicRank_Grid",
+    "Proc_Create": "proc_AcademicRank_Create",
+    "Proc_Update": "proc_AcademicRank_Update",
+    "DeleteMany": "DELETE FROM AcademicRank WHERE AcademicRankID IN @recordIDs",
+    "FindById": "select * from AcademicRank WHERE AcademicRankID = @AcademicRankID;",
+    "CheckDuplicate": "SELECT Top 1 AcademicRankID FROM AcademicRank WHERE {0}"
+  }
+}

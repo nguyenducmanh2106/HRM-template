@@ -1,0 +1,10 @@
+﻿{
+  "StaffAssessment": {
+    "Proc_Grid": "Staff_Assessment_Grid_Dynamic",
+    "Proc_Create": "proc_StaffAssessment_Create",
+    "Proc_Update": "proc_StaffAssessment_Update",
+    "DeleteMany": "DELETE FROM StaffAssessment WHERE StaffAssessmentID IN @recordIDs",
+    "FindById": "SELECT CASE sa.AssessmentType WHEN 1 THEN N'Hoàn thành xuất sắc nhiệm vụ' WHEN 2 THEN N'Hoàn thành tốt nhiệm vụ' WHEN 3 THEN N'Hoàn thành nhiệm vụ' WHEN 4 THEN N'Không hoàn thành nhiệm vụ' ELSE '' END as AssessmentTypeName, sa.StaffID, sa.StaffAssessmentID, sa.Note, sa.Year, s.StaffCode, s.FullName,sa.AssessmentType FROM StaffAssessment sa LEFT JOIN Staff s ON sa.StaffID = s.StaffID WHERE StaffAssessmentID = @StaffAssessmentID",
+    "Check_Staff_Assessment_In_History": "select top 1 h.* from History h where h.StaffID = {0} AND h.Status <> 4 AND ((h.FromDate is not null and ({1} >= Year(h.FromDate))) and ( (h.Todate is null and {1} <= Year(GETDATE())) or ({1} <= Year(h.Todate))))"
+  }
+}

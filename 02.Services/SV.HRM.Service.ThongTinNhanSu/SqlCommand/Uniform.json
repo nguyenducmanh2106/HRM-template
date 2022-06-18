@@ -1,0 +1,9 @@
+﻿{
+  "Uniform": {
+    "Proc_Grid": "sp_Uniform_Filter_Dynamic", //Chú ý tên Proc_Grid mappings với code base
+    "sp_Uniform_CreateOrUpdate": "sp_Uniform_CreateOrUpdate",
+    "sp_Uniform_GetById": "sp_Uniform_GetById",
+    "sp_Uniform_DeleteMany": "sp_Uniform_DeleteMany",
+    "GetStaffFullNameById": "SELECT FullName FROM Staff WHERE StaffID = @StaffID"
+  }
+}

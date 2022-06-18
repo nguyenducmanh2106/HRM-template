@@ -1,0 +1,10 @@
+{
+  "Bank": {
+    "Proc_Grid": "Bank_Grid",
+    "Proc_Create": "proc_Bank_Create",
+    "Proc_Update": "proc_Bank_Update",
+    "DeleteMany": "DELETE FROM Bank WHERE BankID IN @recordIDs",
+    "FindById": "select * from Bank WHERE BankID = @BankID;",
+    "CheckDuplicate": "SELECT Top 1 BankID FROM Bank WHERE {0}"
+  }
+}

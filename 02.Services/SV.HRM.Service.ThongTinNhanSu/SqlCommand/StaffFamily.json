@@ -1,0 +1,10 @@
+{
+  "StaffFamily": {
+    "Proc_Grid": "Staff_Family_Grid_Dynamic",
+    "Proc_Create": "proc_StaffFamily_Create",
+    "Proc_Update": "proc_StaffFamily_Update",
+    "DeleteMany": "DELETE FROM StaffFamily WHERE StaffFamilyID IN @recordIDs",
+    "FindById": "select sf.StaffFamilyID,sf.StaffID,sf.Relationship,sf.FullName,sf.Birthday,sf.ExtraNumber1,sf.ExtraLogic2,sf.ExtraText3,sf.IDCardNo,sf.IDCardIssuePlaceID,sf.IDCardIssueDate,sf.IDCardExpireDate,sf.Telephone,sf.ExtraText2,sf.PITCode,sf.ExtraText5,sf.ExtraText1,sf.Addr,sf.HoKhauThuongTru,sf.TypeHouse,sf.Job,sf.Income,sf.CerID,sf.CerNumber,sf.ExtraNumber2,sf.CerTerritoryID,sf.CerLocationID,sf.CerDistrictID,sf.CerWardID,frs.FamilyRelationshipName from StaffFamily sf left join FamilyRelationship frs on sf.Relationship = frs.FamilyRelationshipID WHERE StaffFamilyID=@StaffFamilyID;",
+    "FindByStaffAndRelation": "select Top 1 * from StaffFamily where StaffID = {0} and Relationship = {1} and FullName = N'{2}';"
+  }
+}

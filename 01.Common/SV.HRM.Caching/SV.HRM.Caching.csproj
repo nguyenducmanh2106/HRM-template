@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+    <PackageReference Include="StackExchange.Redis" Version="2.2.50" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SV.HRM.Core\SV.HRM.Core.csproj" />
+    <ProjectReference Include="..\SV.HRM.Logging\SV.HRM.Logging.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,10 @@
+{
+  "PartyTitle": {
+    "Proc_Grid": "PartyTitle_Grid",
+    "Proc_Create": "proc_PartyTitle_Create",
+    "Proc_Update": "proc_PartyTitle_Update",
+    "DeleteMany": "DELETE FROM PartyTitle WHERE PartyTitleID IN @recordIDs",
+    "FindByIdRecord": "SELECT count(*) from {0} WHERE {1} in @recordIDs;",
+    "FindById": "select * from PartyTitle WHERE PartyTitleID = @PartyTitleID;"
+  }
+}

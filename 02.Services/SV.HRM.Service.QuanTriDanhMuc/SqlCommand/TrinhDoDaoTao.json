@@ -1,0 +1,9 @@
+{
+  "TrinhDoDaoTao": {
+    "Proc_Grid": "TrinhDoDaoTao_Grid",
+    "Proc_Create": "proc_TrinhDoDaoTao_Create",
+    "Proc_Update": "proc_TrinhDoDaoTao_Update",
+    "DeleteMany": "DELETE FROM TrinhDoDaoTao WHERE TrinhDoDaoTaoID IN @recordIDs",
+    "FindById": "select *, d.DiplomaName from TrinhDoDaoTao p left join Diploma d on p.DiplomaID = d.DiplomaID WHERE TrinhDoDaoTaoID = @TrinhDoDaoTaoID;"
+  }
+}

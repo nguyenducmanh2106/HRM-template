@@ -1,0 +1,9 @@
+{
+  "Degree": {
+    "Proc_Grid": "Degree_Grid",
+    "Proc_Create": "proc_Degree_Create",
+    "Proc_Update": "proc_Degree_Update",
+    "DeleteMany": "DELETE FROM Degree WHERE DegreeID IN @recordIDs",
+    "FindById": "select * from Degree WHERE DegreeID = @DegreeID;"
+  }
+}

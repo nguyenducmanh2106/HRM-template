@@ -1,0 +1,9 @@
+{
+  "Shift": {
+    "Proc_Grid": "Shift_Grid",
+    "Proc_Create": "proc_Shift_Create",
+    "Proc_Update": "proc_Shift_Update",
+    "DeleteMany": "DELETE FROM Shift WHERE ShiftID IN @recordIDs",
+    "FindById": "select * from Shift WHERE ShiftID = @ShiftID;"
+  }
+}

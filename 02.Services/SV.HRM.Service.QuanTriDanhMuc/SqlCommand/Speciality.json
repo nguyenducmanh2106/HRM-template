@@ -1,0 +1,10 @@
+{
+  "Speciality": {
+    "Proc_Grid": "Speciality_Grid",
+    "Proc_Create": "proc_Speciality_Create",
+    "Proc_Update": "proc_Speciality_Update",
+    "CountByIdRecord": "SELECT count(*) as countRecord from {0} WHERE {1} = @SpecialityID;",
+    "DeleteMany": "DELETE FROM Speciality WHERE SpecialityID IN @recordIDs",
+    "FindById": "select * from Speciality WHERE SpecialityID = @SpecialityID;"
+  }
+}

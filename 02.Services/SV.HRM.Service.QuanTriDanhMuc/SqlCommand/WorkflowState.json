@@ -1,0 +1,9 @@
+{
+  "WorkflowState": {
+    "Proc_Grid": "WorkflowState_Grid",
+    "Proc_Create": "proc_WorkflowState_Create",
+    "Proc_Update": "proc_WorkflowState_Update",
+    "DeleteMany": "DELETE FROM WorkflowState WHERE WorkflowStateID IN @recordIDs",
+    "FindById": "select * from WorkflowState WHERE WorkflowStateID = @WorkflowStateID;"
+  }
+}

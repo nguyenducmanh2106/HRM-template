@@ -1,0 +1,9 @@
+{
+  "Reward": {
+    "Proc_Grid": "proc_Reward_Grid_Category",
+    "Proc_Create": "proc_Reward_Create",
+    "Proc_Update": "proc_Reward_Update",
+    "DeleteMany": "DELETE FROM Reward WHERE RewardID IN @recordIDs",
+    "FindById": "select * from Reward WHERE RewardID = @RewardID;"
+  }
+}

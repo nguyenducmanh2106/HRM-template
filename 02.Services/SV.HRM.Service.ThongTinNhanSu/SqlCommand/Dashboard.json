@@ -1,0 +1,13 @@
+{
+  "Dashboard": {
+    "sp_Dashboard_StatisticsAllStaff": "sp_Dashboard_StatisticsAllStaff",
+    "sp_Dashboard_StatisticsNewStaff": "sp_Dashboard_StatisticsNewStaff",
+    "sp_Dashboard_StatisticsStaffOut": "sp_Dashboard_StatisticsStaffOut",
+    "sp_Dashboard_StatisticsHumanResourceStructure": "sp_Dashboard_StatisticsHumanResourceStructure",
+    "sp_Dashboard_StatisticsQualification": "sp_Dashboard_StatisticsQualification",
+    "sp_Dashboard_StatisticsPersonnelChange": "sp_Dashboard_StatisticsPersonnelChange",
+    "sp_HealthPeriod_GetAll": "sp_HealthPeriod_GetAll",
+    "sp_QLSK_GetData": "sp_QLSK_GetData",
+    "sp_Get_PositionID_ByOccupationName": "sp_Get_PositionID_ByOccupationName"
+  }
+}

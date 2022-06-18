@@ -1,0 +1,9 @@
+{
+  "Occupation": {
+    "Proc_Grid": "Occupation_Grid",
+    "Proc_Create": "proc_Occupation_Create",
+    "Proc_Update": "proc_Occupation_Update",
+    "DeleteMany": "DELETE FROM Occupation WHERE OccupationID IN @recordIDs",
+    "FindById": "select * from Occupation WHERE OccupationID = @OccupationID;"
+  }
+}

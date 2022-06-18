@@ -1,0 +1,9 @@
+{
+  "MucDoViPhamKyLuat": {
+    "Proc_Grid": "MucDoViPhamKyLuat_Grid",
+    "Proc_Create": "proc_MucDoViPhamKyLuat_Create",
+    "Proc_Update": "proc_MucDoViPhamKyLuat_Update",
+    "DeleteMany": "DELETE FROM MucDoViPhamKyLuat WHERE MucDoViPhamKyLuatID IN @recordIDs",
+    "FindById": "select * from MucDoViPhamKyLuat WHERE MucDoViPhamKyLuatID = @MucDoViPhamKyLuatID;"
+  }
+}

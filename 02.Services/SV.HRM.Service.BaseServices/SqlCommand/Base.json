@@ -1,0 +1,52 @@
+﻿{
+  "Staff": {
+    "Update": "UPDATE Location set LocationCode = @locationCode,LocationName = @locationName, LastUpdatedBy = 0, LastUpdatedDate = @lastUpdatedDate,ParentID = @parentID, TerritoryID = @territoryId WHERE LocationID = @locationId;",
+    "Insert": "INSERT INTO Location(LocationCode,LocationName,CreatedBy,LastUpdatedBy,CreationDate,LastUpdatedDate,ParentID,TerritoryID) values (@locationCode,@locationName,@createdBy,@lastUpdatedBy,@creationDate,@lastUpdatedDate,@parentID,@territoryID);",
+    "Delete": "DELETE FROM Location WHERE LocationID = @locationId;",
+    "SelectAll": "SELECT * FROM Staff where FullName = @fullName",
+    "GetById": "SELECT * FROM Location WHERE LocationID = @locationId",
+    "Proc_Staff_Grid": "Staff_Grid",
+    "GetCombobox": "SELECT * FROM {0} WHERE {1} like N'%@searchText%' ORDER BY {0}ID OFFSET (@page - 1)*10 ROWS FETCH NEXT 10 ROWS ONLY;"
+  },
+  "Base": {
+    "GetCombobox": "SELECT * FROM {0} WHERE {1} like N'%{2}%' ORDER BY {0}ID OFFSET (@page - 1)*10 ROWS FETCH NEXT 10 ROWS ONLY; SELECT Count(1) FROM {0} WHERE {1} like N'%{2}%'",
+    "GetComboboxHasStatusColumn": "SELECT * FROM {0} WHERE {1} like N'%{2}%' AND [Status] = 1  ORDER BY {0}ID OFFSET (@page - 1)*10 ROWS FETCH NEXT 10 ROWS ONLY; SELECT Count(1) FROM {0} WHERE {1} like N'%{2}%'  AND [Status] = 1",
+    "Delete": "Update {0} set [Status] = -1 WHERE {1} = @recordID;",
+    "CheckDuplicate": "proc_CheckDuplicate_{0}_{1}", //{0} tên bảng check - {1}: tên trường check duplicate
+    "GetComboboxByField": "SELECT * FROM {0} WHERE {1} = {2} ; SELECT COUNT(1) FROM {0} WHERE {1} = {2};",
+    "GetComboboxByFieldHasStatusColumn": "SELECT * FROM {0} WHERE {1} = {2} AND [Status] = 1; SELECT COUNT(1) FROM {0} WHERE {1} = {2} AND [Status] = 1;",
+    "proc_GetCombobox": "proc_GetCombobox_{0}_{1}",
+    "GetNameLocation": "SELECT * FROM {0} WHERE {1} = {2};",
+    "GetComboboxByFieldNoCount": "SELECT * FROM {0} WHERE {1} = {2};",
+    "GetComboboxByFieldHasStatusColumnNoCount": "SELECT * FROM {0} WHERE {1} = {2} AND [Status] = 1;",
+    "sp_Users_GetPermission": "sp_Users_GetPermission",
+    "GetUserByUserName": "select * from Users where UserName='{0}'",
+    "DeleteMany": "DELETE FROM {0} WHERE {1} IN @recordIDs;",
+    "TopRecordById": "SELECT Top 1 * from {0} WHERE {1} in @recordIDs;"
+  },
+  "TableField": {
+    "List_TableField_Default": "SELECT * FROM TableField WHERE LayoutCode = @LayoutCode AND UserID IS NULL ORDER BY SortOrder ASC",
+    "List_TableField_ByUserID": "SELECT * FROM TableField WHERE LayoutCode = @LayoutCode AND UserID = @UserID ORDER BY SortOrder ASC",
+    "Update_TableField_First": "UPDATE TableField SET SortOrder = @SortOrder,Hide = @Hide,Width = @Width WHERE LayoutCode = @LayoutCode AND Field = @Field AND UserID = @UserID;",
+    "Update_TableField": "UPDATE TableField SET SortOrder = @SortOrder,Hide = @Hide,Width = @Width WHERE ID = @ID;",
+    "Insert_TableField": "INSERT INTO TableField(ID,LayoutCode,FilterParams,[Type],[Hide],Width,[Field],FieldFilter,HeaderName,SortOrder,UserID,SuppressMenu,ColumnKey,ParentColumnKey) VALUES(@ID,@LayoutCode,@FilterParams,@Type,@Hide,@Width,@Field,@FieldFilter,@HeaderName,@SortOrder,@UserID,@SuppressMenu,@ColumnKey,@ParentColumnKey);"
+  },
+  "GroupBox": {
+    "GetDefaultLayout": "sp_GetDefaultLayout",
+    "GetLayout_ByUserID": "sp_GetLayout_ByUserID",
+    "BulkUpdate_GroupBox": "UPDATE GroupBox SET IsUse = @IsUse,SortOrder = @SortOrder WHERE ID = @ID;",
+    "BulkUpdate_GroupBoxField": "UPDATE GroupBoxField SET IsUse = @IsUse,ColumnNumber = @ColumnNumber,GroupBoxID = @GroupBoxID,SortOrder = @SortOrder WHERE ID = @ID;",
+    "BulkCreate_GroupBoxAndGroupBoxField": "sp_BulkCreate_GroupBoxAndGroupBoxField"
+  },
+  "UserConfig": {
+    "Proc_Grid": "UserConfig_Grid",
+    "Proc_Create": "proc_UserConfig_Create",
+    "Proc_Update": "proc_UserConfig_Update",
+    "DeleteMany": "DELETE FROM UserConfig WHERE UserConfigID IN @recordIDs",
+    "FindById": "select uc.UserConfigID, uc.StaffID, uc.UserID, uc.WorkflowID, s.StaffCode, s.FullName as StaffFullName, wf.WorkflowCode, wf.WorkflowName from UserConfig uc left join Staff s on uc.StaffID = s.StaffID left join Workflow wf on uc.WorkflowID = wf.WorkflowID WHERE uc.UserConfigID = @UserConfigID;",
+    "CheckDuplicate": "SELECT Top 1 UserConfigID FROM Bank WHERE {0}",
+    "GetComboboxStaff": "select StaffID, (FullName + ' (' + StaffCode + ')') as StaffFullName from Staff where FullName like N'%{0}%' or StaffCode like N'%{0}%' order by StaffCode OFFSET ({1} - 1)*10 ROWS FETCH NEXT 10 ROWS ONLY; select count(1) from Staff where FullName like N'%{0}%' or StaffCode like N'%{0}%';",
+    "GetComboboxUser": "select UserId, (FullName + ' (' + UserName + ')') as UserFullName from Users where (UserName like N'%{0}%' or FullName like N'%{1}%') and (Status!=-1) order by UserName OFFSET ({1} - 1)*10 ROWS FETCH NEXT 10 ROWS ONLY; select count(1) from Users where (UserName like N'%{0}%' or FullName like N'%{0}%') and (Status!=-1);",
+    "GetComboboxWorkflow": "select WorkflowID, WorkflowName from Workflow where (WorkflowCode like N'%{0}%' or WorkflowName like N'%{0}%') and (Status = 1) order by WorkflowCode OFFSET ({1} - 1)*10 ROWS FETCH NEXT 10 ROWS ONLY; select count(1) from Workflow where (WorkflowCode like N'%{0}%' or WorkflowName like N'%{0}%') and (Status = 1);"
+  }
+}

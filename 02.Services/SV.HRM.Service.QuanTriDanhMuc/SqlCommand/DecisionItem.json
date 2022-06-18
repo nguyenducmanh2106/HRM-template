@@ -1,0 +1,10 @@
+{
+  "DecisionItem": {
+    "Proc_Grid": "DecisionItem_Grid",
+    "Proc_Create": "proc_DecisionItem_Create",
+    "Proc_Update": "proc_DecisionItem_Update",
+    "CountByIdRecord": "SELECT count(*) as countRecord from {0} WHERE {1} = @DecisionItemID;",
+    "DeleteMany": "DELETE FROM DecisionItem WHERE DecisionItemID IN @recordIDs",
+    "FindById": "select * from DecisionItem WHERE DecisionItemID = @DecisionItemID;"
+  }
+}

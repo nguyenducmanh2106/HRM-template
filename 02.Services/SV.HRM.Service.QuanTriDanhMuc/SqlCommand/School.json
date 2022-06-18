@@ -1,0 +1,10 @@
+{
+  "School": {
+    "Proc_Grid": "School_Grid",
+    "Proc_Create": "proc_School_Create",
+    "Proc_Update": "proc_School_Update",
+    "CountByIdRecord": "SELECT count(*) as countRecord from {0} WHERE {1} = @SchoolID;",
+    "DeleteMany": "DELETE FROM School WHERE SchoolID IN @recordIDs",
+    "FindById": "select * from School WHERE SchoolID = @SchoolID;"
+  }
+}

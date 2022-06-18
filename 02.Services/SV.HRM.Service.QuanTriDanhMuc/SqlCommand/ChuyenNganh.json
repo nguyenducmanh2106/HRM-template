@@ -1,0 +1,9 @@
+{
+  "ChuyenNganh": {
+    "Proc_Grid": "ChuyenNganh_Grid",
+    "Proc_Create": "proc_ChuyenNganh_Create",
+    "Proc_Update": "proc_ChuyenNganh_Update",
+    "DeleteMany": "DELETE FROM ChuyenNganh WHERE ChuyenNganhID IN @recordIDs",
+    "FindById": "select * from ChuyenNganh WHERE ChuyenNganhID = @ChuyenNganhID;"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "StaffMilitary": {
+    "Proc_Grid": "Staff_Military_Grid",
+    "Proc_Create": "proc_StaffMilitary_Create",
+    "Proc_Update": "proc_StaffMilitary_Update",
+    "DeleteMany": "DELETE FROM StaffMilitary WHERE StaffMilitaryID IN @recordIDs",
+    "FindById": "select StaffMilitaryID,EnlistmentDate,DischargeDate,MilitaryUnit,[Rank],[Type],Kind,Is2212,Is2707,Note from StaffMilitary where StaffMilitaryID = @StaffMilitaryID;"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "Attendance": {
+    "Proc_Grid": "sp_Attendance_Grid_Dynamic",
+    "Proc_Create": "proc_Attendance_Create",
+    "Proc_Update": "proc_Attendance_Update",
+    "Proc_Update_Column": "proc_Attendance_Update_Column",
+    "DeleteMany": "DELETE FROM Attendance WHERE AttendanceID IN @recordIDs",
+    "FindById": "select A.AttendanceID,A.ShiftLeave,A.GiaiTrinh,(case when (A.ShiftID IS NOT NULL AND A.ShiftID <> 0) then (SELECT ShiftCode FROM Shift WHERE ShiftID = A.ShiftID) when (A.LeaveID IS NOT NULL AND A.LeaveID <> 0) then (SELECT LeaveCode FROM Leave WHERE LeaveID = A.LeaveID) ELSE N'' end) as ShiftLeaveName from Attendance A WHERE A.AttendanceID = @AttendanceID",
+    "Count_Staff_Attendance": "select * from sp_Count_Staff_Attendance(@DeptID,@Date)",
+    "Get_Combobox_Staff": "proc_GetCombobox_Staff_Attendance_{0}",
+    "Confirm_Attendance": "update Attendance set Post = 1, LichSuXuLy = @LichSuXuLy where AttendanceID IN @recordIDs",
+    "GetDeptIDByUserID": "select DeptID from Staff where UserId = {0}",
+    "Get_Note_Labour": "Select ShiftCode as ShiftLeaveCode, ShiftName as ShiftLeaveName, 2 as ShiftLeaveType from [Shift] Union Select LeaveCode as ShiftLeaveCode, LeaveName as ShiftLeaveName, 1 as ShiftLeaveType from Leave",
+    "Check_Post_Attendance": "select Post from Attendance where AttendanceID = @AttendanceID"
+  }
+}

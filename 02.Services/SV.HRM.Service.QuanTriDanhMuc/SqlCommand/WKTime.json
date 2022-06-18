@@ -1,0 +1,11 @@
+{
+  "WKTime": {
+    "Proc_Grid": "WKTime_Grid",
+    "Proc_Create": "proc_WKTime_Create",
+    "Check_Before_Insert": "select Top 1 * from WKTime where TACategoryID = @TACategoryID AND CONVERT(NVARCHAR(256),WKDate,102) = CONVERT(NVARCHAR(256),@Date,102)",
+    "Get_Date_Holiday": "select HldDate from Holiday",
+    "findByTACategoryAndWKDate": "select * from WKTime where TACategoryID = @TACategoryID AND CONVERT(NVARCHAR(256),WKDate,102) = CONVERT(NVARCHAR(256),@WKDate,102)",
+    "FindByRowNum": "select * from (SELECT ROW_NUMBER() OVER(ORDER BY WKDate ASC) AS RowNum,wkt.TACategoryID,wkt.WKDate,wkt.WKDay,wkt.WKHour,tac.TACategoryName FROM WKTime wkt left join TACategory tac on wkt.TACategoryID = tac.TACategoryID WHERE 1=1) as T where 1=1 AND (@TextSearch IS NULL OR @TextSearch = '' OR T.TACategoryName like N'%'+@TextSearch+'%' OR CONVERT(nvarchar(126),T.WKDay) like N'%'+@TextSearch+'%' OR CONVERT(nvarchar(126),T.WKHour) like N'%'+@TextSearch+'%') AND (T.RowNum IN @recordIDs)",
+    "Delete": "delete from WKTime where TACategoryID = @TACategoryID AND CONVERT(NVARCHAR(256),WKDate,102) = CONVERT(NVARCHAR(256),@WKDate,102)"
+  }
+}

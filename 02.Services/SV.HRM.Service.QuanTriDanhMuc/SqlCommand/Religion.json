@@ -1,0 +1,9 @@
+{
+  "Religion": {
+    "Proc_Grid": "Religion_Grid",
+    "Proc_Create": "proc_Religion_Create",
+    "Proc_Update": "proc_Religion_Update",
+    "DeleteMany": "DELETE FROM Religion WHERE ReligionID IN @recordIDs",
+    "FindById": "select * from Religion WHERE ReligionID = @ReligionID;"
+  }
+}

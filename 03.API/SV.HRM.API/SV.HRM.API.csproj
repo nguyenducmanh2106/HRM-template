@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>cbb57395-64e7-4566-9fe8-2e7423876786</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..</DockerfileContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="HttpServices\Sytem\**" />
+    <Content Remove="HttpServices\Sytem\**" />
+    <EmbeddedResource Remove="HttpServices\Sytem\**" />
+    <None Remove="HttpServices\Sytem\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.21" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.9" />
+    <PackageReference Include="MSTest.TestFramework" Version="2.2.8" />
+    <PackageReference Include="NPOI" Version="2.5.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\01.Common\SV.HRM.Caching\SV.HRM.Caching.csproj" />
+    <ProjectReference Include="..\..\01.Common\SV.HRM.Core\SV.HRM.Core.csproj" />
+    <ProjectReference Include="..\..\01.Common\SV.HRM.Logging\SV.HRM.Logging.csproj" />
+    <ProjectReference Include="..\..\01.Common\SV.HRM.Models\SV.HRM.Models.csproj" />
+  </ItemGroup>
+
+
+</Project>

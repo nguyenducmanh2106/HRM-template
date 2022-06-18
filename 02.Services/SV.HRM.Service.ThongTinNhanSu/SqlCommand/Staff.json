@@ -1,0 +1,23 @@
+{
+  "Staff": {
+    "sp_Staff_GeneralInfo": "sp_Staff_GeneralInfo",
+    "sp_Staff_GeneralInfo_Update": "sp_Staff_GeneralInfo_Update",
+    "sp_Staff_GeneralInfo_AttachFile": "sp_Staff_GeneralInfo_AttachFile",
+    "sp_Staff_GeneralInfo_GetById": "sp_Staff_GeneralInfo_GetById",
+    "sp_Staff_OrtherInfo_GetById": "sp_Staff_OrtherInfo_GetById",
+    "sp_Staff_OrtherInfoCreateOrUpdate": "sp_Staff_OrtherInfoCreateOrUpdate",
+    "Delete": "DELETE FROM Location WHERE LocationID = @locationId;",
+    "SelectAll": "SELECT * FROM Staff where FullName = @fullName",
+    "GetById": "SELECT * FROM Location WHERE LocationID = @locationId",
+    "CheckDuplicate": "SELECT Top 1 StaffID FROM Staff WHERE {0}",
+    "GetStaffIDByAccount": "select StaffID from UserConfig where UserId={0}",
+    "Proc_Grid": "Staff_Grid_Dynamic",
+    "Get_All": "Select StaffID,StaffCode,FullName from Staff;",
+    "DeleteMany": "DELETE FROM Staff WHERE StaffID IN @recordIDs",
+    "DeleteManyStaffLiciense": "DELETE FROM StaffLicense WHERE StaffID IN @recordIDs;DELETE FROM StaffAsset WHERE StaffID IN @recordIDs;DELETE FROM Uniform WHERE StaffID IN @recordIDs;DELETE FROM StaffSalary WHERE StaffID IN @recordIDs;DELETE FROM StaffDiploma WHERE StaffID IN @recordIDs;DELETE FROM LabourContract WHERE StaffID IN @recordIDs;DELETE FROM StaffFamily WHERE StaffID IN @recordIDs;DELETE FROM QuanLySucKhoe WHERE StaffID IN @recordIDs;DELETE FROM StaffParty WHERE StaffID IN @recordIDs;DELETE FROM Decision WHERE StaffID IN @recordIDs;DELETE FROM StaffReward WHERE StaffID IN @recordIDs;DELETE FROM DisciplineDetail WHERE StaffID IN @recordIDs;DELETE FROM StaffAssessment WHERE StaffID IN @recordIDs;DELETE FROM History WHERE StaffID IN @recordIDs;",
+    "DeleteAllHRM_Attachment": "DELETE HRM_Attachment WHERE Id IN(select ha.Id from dbo.fn_AggregationFile(@StaffID) as TotalField inner join HRM_Attachment ha on TotalField.ProfileDocumentID = ha.TypeId);",
+    "GetAllStaffNoUserId": "select * from Staff where UserId is null;",
+    "sp_Staff_Update_UserId": "sp_Staff_Update_UserId",
+    "GetStaffJustDelete": "select UserId FROM Staff WHERE StaffID IN @recordIDs"
+  }
+}

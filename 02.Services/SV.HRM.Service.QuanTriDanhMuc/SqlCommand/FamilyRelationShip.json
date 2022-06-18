@@ -1,0 +1,10 @@
+{
+  "FamilyRelationShip": {
+    "Proc_Grid": "FamilyRelationship_Grid",
+    "Proc_Create": "proc_FamilyRelationship_Create",
+    "Proc_Update": "proc_FamilyRelationship_Update",
+    "DeleteMany": "DELETE FROM FamilyRelationship WHERE FamilyRelationshipID IN @recordIDs",
+    "FindById": "select * from FamilyRelationship WHERE FamilyRelationshipID = @FamilyRelationshipID;",
+    "CheckDuplicate": "SELECT Top 1 FamilyRelationshipID FROM FamilyRelationship WHERE {0}"
+  }
+}

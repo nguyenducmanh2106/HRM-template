@@ -1,0 +1,9 @@
+{
+  "TrinhDoDT": {
+    "Proc_Grid": "TrinhDoDT_Grid",
+    "Proc_Create": "proc_TrinhDoDT_Create",
+    "Proc_Update": "proc_TrinhDoDT_Update",
+    "DeleteMany": "DELETE FROM TrinhDoDT WHERE TrinhDoDTID IN @recordIDs",
+    "FindById": "select * from TrinhDoDT WHERE TrinhDoDTID = @TrinhDoDTID;"
+  }
+}

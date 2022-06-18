@@ -1,0 +1,5 @@
+﻿{
+  "PersonalReminder": {
+    "Proc_Grid": "sp_PersonalReminder_Filter_Dynamic" //Chú ý tên Proc_Grid mappings với code base
+  }
+}

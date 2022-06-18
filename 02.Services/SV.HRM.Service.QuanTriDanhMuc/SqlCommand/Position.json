@@ -1,0 +1,10 @@
+{
+  "Position": {
+    "Proc_Grid": "Position_Grid",
+    "Proc_Create": "proc_Position_Create",
+    "Proc_Update": "proc_Position_Update",
+    "CountByIdRecord": "SELECT count(*) as countRecord from {0} WHERE {1} = @PositionID;",
+    "DeleteMany": "DELETE FROM Position WHERE PositionID IN @recordIDs",
+    "FindById": "select *, o.OccupationName from Position p left join Occupation o on p.OccupationID = o.OccupationID WHERE PositionID = @PositionID;"
+  }
+}

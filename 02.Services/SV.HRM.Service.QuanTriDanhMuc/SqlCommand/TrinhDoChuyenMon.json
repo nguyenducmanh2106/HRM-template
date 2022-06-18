@@ -1,0 +1,10 @@
+{
+  "TrinhDoChuyenMon": {
+    "Proc_Grid": "TrinhDoChuyenMon_Grid",
+    "Proc_Create": "proc_TrinhDoChuyenMon_Create",
+    "Proc_Update": "proc_TrinhDoChuyenMon_Update",
+    "CountByIdRecord": "SELECT count(*) as countRecord from {0} WHERE {1} = @TrinhDoChuyenMonID;",
+    "DeleteMany": "DELETE FROM TrinhDoChuyenMon WHERE TrinhDoChuyenMonID IN @recordIDs",
+    "FindById": "select *, d.DiplomaName from TrinhDoChuyenMon p left join Diploma d on p.DiplomaID = d.DiplomaID WHERE TrinhDoChuyenMonID = @TrinhDoChuyenMonID;"
+  }
+}

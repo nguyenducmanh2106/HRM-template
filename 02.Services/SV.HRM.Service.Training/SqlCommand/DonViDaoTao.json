@@ -1,0 +1,10 @@
+{
+  "DonViDaoTao": {
+    "Proc_Grid": "DonViDaoTao_Grid",
+    "Proc_Create": "proc_DonViDaoTao_Create",
+    "Proc_Update": "proc_DonViDaoTao_Update",
+    "CountByIdRecord": "SELECT count(*) as countRecord from {0} WHERE {1} = @DonViDaoTaoID;",
+    "DeleteMany": "DELETE FROM DonViDaoTao WHERE DonViDaoTaoID IN @recordIDs",
+    "FindById": "select * from DonViDaoTao WHERE DonViDaoTaoID = @DonViDaoTaoID;"
+  }
+}

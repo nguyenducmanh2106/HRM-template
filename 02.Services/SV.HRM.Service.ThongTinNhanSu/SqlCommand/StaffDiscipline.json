@@ -1,0 +1,9 @@
+{
+  "StaffDiscipline": {
+    "Proc_Grid": "Staff_Discipline_Grid_Dynamic",
+    "Proc_Create": "proc_DisciplineDetail_Create",
+    "Proc_Update": "proc_DisciplineDetail_Update",
+    "DeleteMany": "DELETE FROM DisciplineDetail WHERE StaffMilitaryID IN @recordIDs",
+    "FindById": "select dd.DisciplineDetailID,dd.PeriodID,dt.DisciplineTypeID,md.MucDoViPhamKyLuatID,dd.StaffID,s.FullName,dd.DisciplineDate,dd.DecisionNo,dt.Description1,md.MucDoViPhamKyLuatName,dd.EffectiveFrom,dd.EffectiveTo,dd.Note,dd.CompensationLevel,dd.CompensationMode from DisciplineDetail dd left join DisciplineType dt on dd.DisciplineTypeID = dt.DisciplineTypeID left join MucDoViPhamKyLuat md on dd.PeriodID = md.MucDoViPhamKyLuatID left join Staff s on dd.StaffID = s.StaffID WHERE DisciplineDetailID = @DisciplineDetailID;"
+  }
+}

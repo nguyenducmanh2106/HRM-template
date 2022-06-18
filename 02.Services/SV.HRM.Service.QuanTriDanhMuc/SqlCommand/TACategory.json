@@ -1,0 +1,9 @@
+{
+  "TACategory": {
+    "Proc_Grid": "TACategory_Grid",
+    "Proc_Create": "proc_TACategory_Create",
+    "Proc_Update": "proc_TACategory_Update",
+    "DeleteMany": "DELETE FROM TACategory WHERE TACategoryID IN @recordIDs",
+    "FindById": "select * from TACategory WHERE TACategoryID = @TACategoryID;"
+  }
+}

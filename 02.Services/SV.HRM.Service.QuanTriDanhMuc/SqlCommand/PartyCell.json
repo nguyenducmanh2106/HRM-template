@@ -1,0 +1,10 @@
+{
+  "PartyCell": {
+    "Proc_Grid": "PartyCell_Grid",
+    "Proc_Create": "proc_PartyCell_Create",
+    "Proc_Update": "proc_PartyCell_Update",
+    "DeleteMany": "DELETE FROM PartyCell WHERE PartyCellID IN @recordIDs",
+    "FindByIdRecord": "SELECT count(*) from {0} WHERE {1} in @recordIDs;",
+    "FindById": "select * from PartyCell WHERE PartyCellID = @PartyCellID;"
+  }
+}

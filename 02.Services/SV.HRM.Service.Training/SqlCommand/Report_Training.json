@@ -1,0 +1,8 @@
+{
+  "Report_Training": {
+    "Proc_Grid": "sp_Report_Training_Grid_Dynamic",
+    "Proc_Create": "sp_Report_Training_Create",
+    "Proc_Update": "sp_Report_Training_Update",
+    "FindById": "select *,s.FullName,s.StaffCode,cn.ChuyenNganhName,d.DiplomaName,tddt.TrinhDoDaoTaoName,dvdt.DonViDaoTaoName from QuanLyDaoTao qldt LEFT JOIN Staff s on qldt.StaffID = s.StaffID LEFT JOIN ChuyenNganh cn on qldt.ChuyenNganhID = cn.ChuyenNganhID LEFT JOIN Diploma d on qldt.DiplomaID = d.DiplomaID LEFT JOIN TrinhDoDaoTao tddt on tddt.TrinhDoDaoTaoID = qldt.TrinhDoDaoTaoID LEFT JOIN DonViDaoTao dvdt on qldt.DonViDaoTaoID = dvdt.DonViDaoTaoID WHERE QuanLyDaoTaoID = @QuanLyDaoTaoID"
+  }
+}

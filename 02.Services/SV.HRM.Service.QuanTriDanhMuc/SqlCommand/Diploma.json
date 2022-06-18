@@ -1,0 +1,10 @@
+{
+  "Diploma": {
+    "Proc_Grid": "Diploma_Grid",
+    "Proc_Create": "proc_Diploma_Create",
+    "Proc_Update": "proc_Diploma_Update",
+    "CountByIdRecord": "SELECT count(*) as countRecord from {0} WHERE {1} = @DiplomaID;",
+    "DeleteMany": "DELETE FROM Diploma WHERE DiplomaID IN @recordIDs",
+    "FindById": "select * from Diploma WHERE DiplomaID = @DiplomaID;"
+  }
+}

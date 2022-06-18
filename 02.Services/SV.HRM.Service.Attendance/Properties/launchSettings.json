@@ -1,0 +1,20 @@
+{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iis": {
+      "applicationUrl": "http://localhost/SV.HRM.Service.Attendance",
+      "sslPort": 0
+    },
+    "iisExpress": {
+      "applicationUrl": "http://localhost:63167/",
+      "sslPort": 44377
+    }
+  },
+  "profiles": {
+    "SV.HRM.Service.Attendance": {
+      "commandName": "IISExpress",
+      "launchBrowser": false
+    }
+  }
+}

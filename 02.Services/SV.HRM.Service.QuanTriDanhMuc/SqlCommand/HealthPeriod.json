@@ -1,0 +1,11 @@
+{
+  "HealthPeriod": {
+    "Proc_Grid": "HealthPeriod_Grid",
+    "Proc_Create": "proc_HealthPeriod_Create",
+    "Proc_Update": "proc_HealthPeriod_Update",
+    "CountByIdRecord": "SELECT count(*) as countRecord from {0} WHERE {1} = @HealthPeriodID;",
+    "DeleteMany": "DELETE FROM HealthPeriod WHERE HealthPeriodID IN @recordIDs",
+    "FindById": "select * from HealthPeriod WHERE HealthPeriodID = @HealthPeriodID;",
+    "FindDateInPeriod": "select top 1 * from HealthPeriod WHERE (@HealthPeriodID IS NULL OR HealthPeriodID != @HealthPeriodID) AND ((@FromDate between FromDate and ToDate) or (@ToDate between FromDate and ToDate) or (FromDate between @FromDate and @ToDate) or (ToDate between @FromDate and @ToDate))"
+  }
+}

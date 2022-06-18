@@ -1,0 +1,102 @@
+﻿{
+  "Report": {
+    "staff-quality": "sp_Reporting_StaffQuality", // Báo cáo chất lượng cán bộ công chức, viên chức ngành y tế HN ( đã có )
+    "list-party": "dbo.sp_Reporting_ListParty", // Danh sách đảng viên ( Đã có )
+    "job-certificate": "sp_Reporting_JobCertificate", // Báo cáo chứng chỉ hành nghề
+    "Report_TangLuong": "sp_Reporting_TangLuong", // Báo cáo Tăng lương thường xuyên
+    "promotion-staff": "sp_Reporting_PromotionStaff", // Báo cáo thăng hạng
+    "list-quality-staff": "sp_Reporting_ListQualityStaff", // Báo cáo số lượng, chất lượng đội ngũ viên chức
+    "hanh-nghe-luan-phien": "dbo.sp_Reporting_HNLP", //Báo cáo hành nghề đi luân phiên
+    "chuyen-loai": "sp_Reporting_chuyenloai", // Báo cáo chuyển loại
+    "dang-phi": "sp_Reporting_dangphi", // Báo cáo Đảng phí
+    "tong-hop-nam": "sp_Reporting_THN", // Tổng hợp năm
+    "tang-luong-trc-thoi-han": "sp_Reporting_TLTRCTH", // Báo cáo Tăng lương trước thời hạn
+    "keo-dai-tang-luong": "sp_Reporting_KDTL", // Báo cáo kéo dài thời hạn nâng lương
+    "luong-vuot-khung": "sp_Reporting_LVK", // Nâng lương vượt khung
+    "luong-hd-ngan-han": "sp_Reporting_LHDNH", // Báo cáo cáo tăng lương hợp đồng ngắn hạn
+    "kham-suc-khoe": "sp_Reporting_KSK", // Báo cáo tổng hợp kết quả KSK CBNV BV
+    "tu-van-ksk": "sp_Reporting_TVSK", // Báo cáo tư vấn CBNV KSK
+    "aggregate-manpower": "sp_Reporting_Aggregate-Manpower", //Tổng hợp nhân lực
+    "nhanluc-ngoai-cohuu": "sp_Reporting_NhanLucNgoaiCoHuu", // nhân lực ngoài cơ hữu
+    "DayOfWorkInMonth": "sp_DayOfWorkInMonth_Staff", // báo cáo ca làm trong tháng
+    "ShiftOfWorkInMonth": "sp_ShiftOfWorkInMonth_Staff", // báo cáo ca trực trong tháng
+    "HaveLunch": "sp_HaveLunchInMonth_Staff", // báo cáo ca ăn trưa trong tháng
+    "Attendance": "sp_AttendanceInMonth", // báo cáo bảng chấm công tháng
+    "Attendance_30days": "sp_AttendanceInMonth", // báo cáo bảng chấm công tháng
+    "Attendance_29days": "sp_AttendanceInMonth", // báo cáo bảng chấm công tháng
+    "Attendance_28days": "sp_AttendanceInMonth", // báo cáo bảng chấm công tháng
+    "Attendance_OutSideTime": "sp_AttendanceOutSideTimeInMonth", // báo cáo ngoài giờ định suất
+    "Attendance_OutSideTime_30days": "sp_AttendanceOutSideTimeInMonth", // báo cáo ngoài giờ định suất
+    "Attendance_OutSideTime_29days": "sp_AttendanceOutSideTimeInMonth", // báo cáo ngoài giờ định suất
+    "Attendance_OutSideTime_28days": "sp_AttendanceOutSideTimeInMonth" // báo cáo ngoài giờ định suất
+  },
+  "Template": {
+    "staff-quality": "Excel_staff-quality.xlsx", // Báo cáo chất lượng cán bộ công chức, viên chức ngành y tế HN ( đã có )
+    "list-party": "Excel_list-party.xlsx", // Danh sách đảng viên ( Đã có )
+    "job-certificate": "Excel_JobCertificate.xlsx", // Báo cáo chứng chỉ hành nghề
+    "ExportExcel_TangLuongThuongXuyen": "ExportExcel_TangLuongThuongXuyen.xlsx", // Báo cáo Tăng lương thường xuyên
+    "promotion-staff": "Excel_PromotionStaff.xlsx", // Báo cáo thăng hạng
+    "list-quality-staff": "Excel_ListQualityStaff.xlsx", // Báo cáo số lượng, chất lượng đội ngũ viên chức
+    "hanh-nghe-luan-phien": "Excel_HNLP.xlsx", //Báo cáo hành nghề đi luân phiên
+    "chuyen-loai": "Excel_chuyenloai.xlsx", // Báo cáo chuyển loại
+    "dang-phi": "Excel_dangphi.xlsx", // Báo cáo Đảng phí
+    "tong-hop-nam": "Excel_THN.xlsx", // Tổng hợp năm
+    "tang-luong-trc-thoi-han": "Excel_TLTRCTH.xlsx", // Báo cáo Tăng lương trước thời hạn
+    "keo-dai-tang-luong": "Excel_KDTL.xlsx", // Báo cáo kéo dài thời hạn nâng lương
+    "luong-vuot-khung": "Excel_LVK.xlsx", // Nâng lương vượt khung
+    "luong-hd-ngan-han": "Excel_LHDNH.xlsx", // Báo cáo cáo tăng lương hợp đồng ngắn hạn
+    "kham-suc-khoe": "Excel_KSK.xlsx", // Báo cáo tổng hợp kết quả KSK CBNV BV
+    "tu-van-ksk": "Excel_TVSK.xlsx", // Báo cáo tư vấn CBNV KSK
+    "aggregate-manpower": "Aggregate_Manpower.xlsx", //Tổng hợp nhân lực
+    "nhanluc-ngoai-cohuu": "NhanLuc_ngoai_cohuu.xlsx", // nhân lực ngoài cơ hữu
+    "DayOfWorkInMonth": "General_DayOfWork.xlsx", // mẫu báo cáo ca làm trong tháng
+    "ShiftOfWorkInMonth": "General_ShiftOfWork.xlsx", // mẫu báo cáo ca trực trong tháng
+    "HaveLunch": "General_HaveLunch.xlsx", // báo cáo ăn trưa trong tháng
+    "Attendance": "General_Attendance.xlsx", // báo cáo bảng chấm công tháng
+    "Attendance_30days": "General_Attendance_30days.xlsx", // báo cáo bảng chấm công tháng
+    "Attendance_29days": "General_Attendance_29days.xlsx", // báo cáo bảng chấm công tháng
+    "Attendance_28days": "General_Attendance_28days.xlsx", // báo cáo bảng chấm công tháng
+    "Attendance_OutSideTime": "General_Attendance_OutSideTime.xlsx", // báo cáo ngoài giờ định suất
+    "Attendance_OutSideTime_30days": "General_Attendance_OutSideTime_30days.xlsx", // báo cáo ngoài giờ định suất
+    "Attendance_OutSideTime_29days": "General_Attendance_OutSideTime_29days.xlsx", // báo cáo ngoài giờ định suất
+    "Attendance_OutSideTime_28days": "General_Attendance_OutSideTime_28days.xlsx" // báo cáo ngoài giờ định suất
+  },
+  "Output": {
+    "staff-quality": "Excel_staff-quality.xlsx", // Báo cáo chất lượng cán bộ công chức, viên chức ngành y tế HN ( đã có )
+    "list-party": "Excel_list-party.xlsx", // Danh sách đảng viên ( Đã có )
+    "job-certificate": "Excel_JobCertificate.xlsx", // Báo cáo chứng chỉ hành nghề
+    "ExportExcel_TangLuongThuongXuyen": "ExportExcel_TangLuongThuongXuyen.xlsx", // Báo cáo Tăng lương thường xuyên
+    "promotion-staff": "Excel_PromotionStaff.xlsx", // Báo cáo thăng hạng
+    "list-quality-staff": "Excel_ListQualityStaff.xlsx", // Báo cáo số lượng, chất lượng đội ngũ viên chức
+    "hanh-nghe-luan-phien": "Excel_HNLP.xlsx", //Báo cáo hành nghề đi luân phiên
+    "chuyen-loai": "Excel_chuyenloai.xlsx", // Báo cáo chuyển loại
+    "dang-phi": "Excel_dangphi.xlsx", // Báo cáo Đảng phí
+    "tong-hop-nam": "Excel_THN.xlsx", // Tổng hợp năm
+    "tang-luong-trc-thoi-han": "Excel_TLTRCTH.xlsx", // Báo cáo Tăng lương trước thời hạn
+    "keo-dai-tang-luong": "Excel_KDTL.xlsx", // Báo cáo kéo dài thời hạn nâng lương
+    "luong-vuot-khung": "Excel_LVK.xlsx", // Nâng lương vượt khung
+    "luong-hd-ngan-han": "Excel_LHDNH.xlsx", // Báo cáo cáo tăng lương hợp đồng ngắn hạn
+    "kham-suc-khoe": "Excel_KSK.xlsx", // Báo cáo tổng hợp kết quả KSK CBNV BV
+    "tu-van-ksk": "Excel_TVSK.xlsx", // Báo cáo tư vấn CBNV KSK
+    "aggregate-manpower": "Aggregate_Manpower.xlsx", //Tổng hợp nhân lực
+    "nhanluc-ngoai-cohuu": "NhanLuc_ngoai_cohuu.xlsx", // nhân lực ngoài cơ hữu
+    "DayOfWorkInMonth": "General_DayOfWork.xlsx", // file đầu ra báo cáo ca làm trong tháng
+    "ShiftOfWorkInMonth": "General_ShiftOfWork.xlsx", // file đầu ra báo cáo ca trực trong tháng
+    "HaveLunch": "General_HaveLunch.xlsx", // báo cáo ăn trưa trong tháng
+    "Attendance": "General_Attendance.xlsx", // báo cáo bảng chấm công tháng
+    "Attendance_30days": "General_Attendance_30days.xlsx", // báo cáo bảng chấm công tháng
+    "Attendance_29days": "General_Attendance_29days.xlsx", // báo cáo bảng chấm công tháng
+    "Attendance_28days": "General_Attendance_28days.xlsx", // báo cáo bảng chấm công tháng
+    "Attendance_OutSideTime": "General_Attendance_OutSideTime.xlsx", // báo cáo ngoài giờ định suất
+    "Attendance_OutSideTime_30days": "General_Attendance_OutSideTime_30days.xlsx", // báo cáo ngoài giờ định suất
+    "Attendance_OutSideTime_29days": "General_Attendance_OutSideTime_29days.xlsx", // báo cáo ngoài giờ định suất
+    "Attendance_OutSideTime_28days": "General_Attendance_OutSideTime_28days.xlsx" // báo cáo ngoài giờ định suất
+  },
+  "OutputMaster": {
+    "kham-suc-khoe": "sp_MasterReporting_KSK", // Báo cáo tổng hợp kết quả KSK CBNV BV
+    "dang-phi": "sp_Reporting_MasterDangPhi" // Báo cáo tổng hợp kết quả KSK CBNV BV
+  },
+  "Attendance": {
+    "get-name-day-of-week": "sp_GetWeekNameInMonth"
+  }
+}

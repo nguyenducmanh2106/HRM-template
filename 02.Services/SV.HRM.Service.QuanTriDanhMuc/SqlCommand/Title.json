@@ -1,0 +1,9 @@
+{
+  "Title": {
+    "Proc_Grid": "Title_Grid",
+    "Proc_Create": "proc_Title_Create",
+    "Proc_Update": "proc_Title_Update",
+    "DeleteMany": "DELETE FROM Title WHERE TitleID IN @recordIDs",
+    "FindById": "select * from Title WHERE TitleID = @TitleID;"
+  }
+}

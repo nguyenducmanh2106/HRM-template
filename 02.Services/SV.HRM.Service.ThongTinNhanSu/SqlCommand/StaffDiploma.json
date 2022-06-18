@@ -1,0 +1,10 @@
+{
+  "StaffDiploma": {
+    "Proc_Grid": "Staff_Diploma_Grid_Dynamic",
+    "Proc_Create": "proc_StaffDiploma_Create",
+    "Proc_Update": "proc_StaffDiploma_Update",
+    "Create": "INSERT INTO History(StaffID,[Status],DeptID,HistoryNo,DecisionDate,FromDate,Todate,PositionID,JobTitleID,CategoryID,WorkGroupID,Note,CreatedBy,LastUpdatedBy,CreationDate,LastUpdatedDate) VALUES (@StaffID,@Status,@DeptID,@HistoryNo,@DecisionDate,@FromDate,@Todate,@PositionID,@JobTitleID,@CategoryID,@WorkGroupID,@Note,@CreatedBy,@LastUpdatedBy,@CreationDate,@LastUpdatedDate);",
+    "FindById": "select sd.DiplomaID,sd.StaffID,sd.DiplomaNo,sd.ExtraText10,sd.ChuyenKhoaID,ck.TenChuyenKhoa,sd.ExtraNumber1,cn.ChuyenNganhName,sd.ExtraDate3,sd.ExtraText1,sd.ExtraDate1,sd.ExtraDate2,sd.ExtraLogic1,sd.ExtraLogic2,sd.TrinhDoDaoTaoID,sd.TrinhDoChuyenMonID,sd.MainSubject,sd.SpecialityID,sd.SchoolID,d.DiplomaName,t.TrinhDoDaoTaoName,tm.TrinhDoChuyenMonName,s.SpecialityName,sc.SchoolName from StaffDiploma sd left join Diploma d on sd.DiplomaID = d.DiplomaID left join ChuyenKhoa ck on sd.ChuyenKhoaID = ck.ChuyenKhoaID left join ChuyenNganh cn on sd.ExtraNumber1 = cn.ChuyenNganhID left join TrinhDoDaoTao t on sd.TrinhDoDaoTaoID = t.TrinhDoDaoTaoID left join TrinhDoChuyenMon tm on sd.TrinhDoChuyenMonID = tm.TrinhDoChuyenMonID left join Speciality s on sd.SpecialityID = s.SpecialityID left join School sc on sd.SchoolID = sc.SchoolID where StaffDiplomaID = @StaffDiplomaID;",
+    "FindByStaffAndDiplomaNo": "select Top 1 * from StaffDiploma where StaffID = {0} and DiplomaNo = N'{1}';"
+  }
+}

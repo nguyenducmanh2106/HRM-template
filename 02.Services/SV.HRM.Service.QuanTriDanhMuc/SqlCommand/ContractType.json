@@ -1,0 +1,9 @@
+{
+  "ContractType": {
+    "Proc_Grid": "ContractType_Grid",
+    "Proc_Create": "proc_ContractType_Create",
+    "Proc_Update": "proc_ContractType_Update",
+    "DeleteMany": "DELETE FROM ContractType WHERE ContractTypeID IN @recordIDs",
+    "FindById": "select * from ContractType WHERE ContractTypeID = @ContractTypeID;"
+  }
+}

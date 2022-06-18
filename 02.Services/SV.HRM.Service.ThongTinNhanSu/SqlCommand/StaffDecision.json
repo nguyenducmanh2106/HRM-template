@@ -1,0 +1,9 @@
+{
+  "StaffDecision": {
+    "Proc_Grid": "Decision_Grid_Dynamic",
+    "Proc_Create": "proc_Decision_Create",
+    "Proc_Update": "proc_Decision_Update",
+    "DeleteMany": "DELETE FROM Decision WHERE DecisionID IN @recordIDs",
+    "FindById": "select d.DecisionID,d.StaffID,s.FullName,d.DecisionNo,d.DecisionDate,d.DecisionItemID,d.DeptID,d.PositionID,d.JobTitleID,di.DecisionItemName,p.PositionName,c.CurrencyName,jt.JobTitleName,d.CurrencyID,d.ExtraNumber1,d.BasicSalary,d.ExtraNumber2,d.ExtraText1,d.AllowanceRate1,d.AllowanceRate2,d.AllowanceRate3,d.AllowanceRate4,d.EffectiveFromDate,d.EffectiveToDate,d.StaffRequestID,d.StaffPerformID,StaffHandoverID,StaffTransferID,d.StaffApproveID,d.ApproveDate,d.Note from Decision d left join DecisionItem di on d.DecisionItemID = di.DecisionItemID left join Position p on d.PositionID = p.PositionID left join Staff s on d.StaffID = s.StaffID left join Currency c on d.CurrencyID = c.CurrencyID left join JobTitle jt on d.JobTitleID = jt.JobTitleID WHERE DecisionID = @DecisionID;"
+  }
+}

@@ -1,0 +1,8 @@
+﻿{
+  "StaffRef": {
+    "Proc_Grid": "sp_StaffRef_Filter", //Chú ý tên Proc_Grid mappings với code base
+    "sp_StaffRef_CreateOrUpdate": "sp_StaffRef_CreateOrUpdate",
+    "sp_StaffRef_GetById": "sp_StaffRef_GetById",
+    "sp_StaffRef_DeleteMany": "sp_StaffRef_DeleteMany"
+  }
+}

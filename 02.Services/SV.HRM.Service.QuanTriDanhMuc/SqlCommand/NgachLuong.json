@@ -1,0 +1,10 @@
+{
+  "NgachLuong": {
+    "Proc_Grid": "NgachLuong_Grid",
+    "Proc_Create": "proc_NgachLuong_Create",
+    "Proc_Update": "proc_NgachLuong_Update",
+    "DeleteMany": "DELETE FROM NgachLuong WHERE NgachLuongID IN @recordIDs",
+    //"FindById": "select p.NgachLuongID,p.MaNgachLuong,p.TenNgachLuong,p.ThoiGianNangLuong,p.NhomNgachLuongID,o.TenNhomNgachLuong from NgachLuong p inner join NhomNgachLuong o on p.NhomNgachLuongID = o.NhomNgachLuongID WHERE NgachLuongID = @NgachLuongID;"
+    "FindById": "select *, o.TenNhomNgachLuong from NgachLuong p left join NhomNgachLuong o on p.NhomNgachLuongID = o.NhomNgachLuongID WHERE NgachLuongID = @NgachLuongID;"
+  }
+}

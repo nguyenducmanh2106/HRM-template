@@ -1,0 +1,9 @@
+{
+  "ChucVuChinhQuyen": {
+    "Proc_Grid": "ChucVuChinhQuyen_Grid",
+    "Proc_Create": "proc_ChucVuChinhQuyen_Create",
+    "Proc_Update": "proc_ChucVuChinhQuyen_Update",
+    "DeleteMany": "DELETE FROM ChucVuChinhQuyen WHERE ChucVuChinhQuyenID IN @recordIDs",
+    "FindById": "select * from ChucVuChinhQuyen WHERE ChucVuChinhQuyenID = @ChucVuChinhQuyenID;"
+  }
+}

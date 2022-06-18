@@ -1,0 +1,9 @@
+{
+  "ProfileDocument": {
+    "Proc_Grid": "Staff_ProfileDocument_Grid_Dynamic",
+    "Proc_Create": "Staff_ProfileDocument_Create",
+    "Proc_Update": "Staff_ProfileDocument_Update",
+    "DeleteMany": "DELETE FROM Attachment WHERE DecisionID IN @recordIDs",
+    "FindById": "SELECT pd.ProfileDocumentID,pd.ProfileDocumentName,pd.ProfileDocumentNo,pd.IssueDate,pd.IssuePlace,pd.StaffID,pd.Note FROM ProfileDocument pd  WHERE pd.ProfileDocumentID = @ProfileDocumentID"
+  }
+}

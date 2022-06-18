@@ -1,0 +1,18 @@
+{
+  "RemindWork": {
+    "sp_RemindWork_GetCurrentHistory": "sp_RemindWork_GetCurrentHistory",
+    "sp_RemindWork_GetCurrentStrengthenHistory": "sp_RemindWork_GetCurrentStrengthenHistory",
+    "sp_RemindWork_GetCurrentContract": "sp_RemindWork_GetCurrentContract",
+    "sp_RemindWork_GetCurrentSalary": "sp_RemindWork_GetCurrentSalary",
+    "sp_RemindWork_Discipline": "sp_RemindWork_Discipline",
+    "sp_RemindWork_OfficialPartyChange": "sp_RemindWork_OfficialPartyChange",
+    "sp_RemindWork_BirthdayStaff": "sp_RemindWork_BirthdayStaff",
+    "sp_RemindWork_GetConfigSystemRemindByStaffID": "sp_RemindWork_GetConfigSystemRemindByStaffID",
+    "sp_RemindWork_GetPersonalReminderByStaffID": "sp_RemindWork_GetPersonalReminderByStaffID",
+    "sp_RemindWork_GetPersonalReminderByID": "sp_RemindWork_GetPersonalReminderByID",
+    "sp_RemindWork_ConfigSystemRemind": "sp_RemindWork_ConfigSystemRemind",
+    "sp_RemindWork_ConfigUserRemind": "sp_RemindWork_ConfigUserRemind",
+    "sp_RemindWork_PersonalReminder_Del": "sp_RemindWork_PersonalReminder_Del",
+    "sp_RemindWork_PersonalReminder_Completed": "sp_RemindWork_PersonalReminder_Completed"
+  }
+}

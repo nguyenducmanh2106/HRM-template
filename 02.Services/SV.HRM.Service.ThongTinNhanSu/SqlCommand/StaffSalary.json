@@ -1,0 +1,13 @@
+{
+  "StaffSalary": {
+    "Proc_Grid": "Staff_Salary_Grid_Dynamic",
+    "Proc_Create": "proc_StaffSalary_Create",
+    "Proc_Update": "proc_StaffSalary_Update",
+    "DeleteMany": "DELETE FROM StaffSalary WHERE StaffSalaryID IN @recordIDs",
+    "GetHeSoThamNien": "sp_HeSoThamNien",
+    "FindById": "select ss.*,nnl.TenNhomNgachLuong,nl.ThoiGianNangLuong,nl.TenNgachLuong,bl.TenBacLuong,c.CurrencyName from StaffSalary ss left join NhomNgachLuong nnl on ss.NhomNgachLuongID = nnl.NhomNgachLuongID left join NgachLuong nl on ss.NgachLuongID = nl.NgachLuongID left join BacLuong bl on ss.BacLuongID = bl.BacLuongID left join Currency c on ss.CurrencyID = c.CurrencyID where StaffSalaryID = @StaffSalaryID",
+    "FindByStaffAndDecisionNo": "proc_StaffSalary_FindByStaffAndDecisionNo",
+    "GetStaffSalary_AdjacentBefore": "proc_GetStaffSalary_AdjacentBefore",
+    "Check_Staff_Salary_In_History": "select top 1 h.* from History h where h.StaffID = {0} AND h.Status <> 4 AND ((h.FromDate is not null and ('{1}' >= FORMAT(h.FromDate,'yyyy-MM-dd')) AND ((h.Todate is null and '{2}' <= FORMAT(GETDATE(),'yyyy-MM-dd') ) or ('{2}' <= FORMAT(h.Todate,'yyyy-MM-dd')))))"
+  }
+}

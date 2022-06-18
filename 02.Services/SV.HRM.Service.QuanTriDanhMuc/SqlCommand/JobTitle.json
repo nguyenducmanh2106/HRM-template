@@ -1,0 +1,9 @@
+{
+  "JobTitle": {
+    "Proc_Grid": "JobTitle_Grid",
+    "Proc_Create": "proc_JobTitle_Create",
+    "Proc_Update": "proc_JobTitle_Update",
+    "DeleteMany": "DELETE FROM JobTitle WHERE JobTitleID IN @recordIDs",
+    "FindById": "select * from JobTitle WHERE JobTitleID = @JobTitleID;"
+  }
+}

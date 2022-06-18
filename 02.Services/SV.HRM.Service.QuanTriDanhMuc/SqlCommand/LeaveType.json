@@ -1,0 +1,9 @@
+{
+  "LeaveType": {
+    "Proc_Grid": "LeaveType_Grid",
+    "Proc_Create": "proc_LeaveType_Create",
+    "Proc_Update": "proc_LeaveType_Update",
+    "DeleteMany": "DELETE FROM LeaveType WHERE LeaveTypeID IN @recordIDs",
+    "FindById": "select * from LeaveType WHERE LeaveTypeID = @LeaveTypeID;"
+  }
+}

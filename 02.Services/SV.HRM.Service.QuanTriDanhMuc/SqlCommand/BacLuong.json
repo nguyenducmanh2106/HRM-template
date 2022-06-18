@@ -1,0 +1,9 @@
+{
+  "BacLuong": {
+    "Proc_Grid": "BacLuong_Grid",
+    "Proc_Create": "proc_BacLuong_Create",
+    "Proc_Update": "proc_BacLuong_Update",
+    "DeleteMany": "DELETE FROM BacLuong WHERE BacLuongID IN @recordIDs",
+    "FindById": "select *, o.TenNgachLuong from BacLuong p left join NgachLuong o on p.NgachLuongID = o.NgachLuongID WHERE BacLuongID = @BacLuongID;"
+  }
+}

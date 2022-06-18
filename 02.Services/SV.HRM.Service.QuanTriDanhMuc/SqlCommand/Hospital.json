@@ -1,0 +1,9 @@
+{
+  "Hospital": {
+    "Proc_Grid": "Hospital_Grid",
+    "Proc_Create": "proc_Hospital_Create",
+    "Proc_Update": "proc_Hospital_Update",
+    "DeleteMany": "DELETE FROM Hospital WHERE HospitalID IN @recordIDs",
+    "FindById": "select * from Hospital WHERE HospitalID = @HospitalID;"
+  }
+}

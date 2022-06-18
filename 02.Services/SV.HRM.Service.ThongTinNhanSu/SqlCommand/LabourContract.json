@@ -1,0 +1,11 @@
+{
+  "LabourContract": {
+    "Proc_Grid": "Staff_LabourContract_Grid_Dynamic",
+    "Proc_Create": "proc_LabourContract_Create",
+    "Proc_Update": "proc_LabourContract_Update",
+    "GetComboboxParentLabourContractID": "SELECT * FROM LabourContract WHERE (LabourContractNo like N'%{0}%') AND StaffID = @StaffID AND (ParentLabourContractID IS NULL OR ParentLabourContractID= @ParentLabourContractID); SELECT COUNT(1) FROM LabourContract WHERE (LabourContractNo like N'%{0}%') AND StaffID = @StaffID AND (ParentLabourContractID IS NULL OR ParentLabourContractID= @ParentLabourContractID);",
+    "DeleteMany": "DELETE FROM StaffSalary WHERE StaffSalaryID IN @recordIDs",
+    "FindById": "select lb.LabourContractID,lb.ExtraNumber2,lc.LabourContractNo as ParentLabourContractName,lb.LabourContractNo,lb.ContractDate,lb.EmployerID,s.FullName,lb.ParentLabourContractID,lb.ContractTypeID,ct.ContractTypeName,lb.ContractFromDate,lb.ContractToDate,lb.Working,lb.WorkingAddr,lb.BranchID,b.BranchName,lb.EmployeePositionID,p.PositionName,lb.SalaryRate,lb.BasicSalary,lb.ExtraNumber1,lb.InsuranceSalary,lb.PayrollType,lb.ExtraText9 from LabourContract lb left join Staff s on lb.EmployerID = s.StaffID left join ContractType ct on lb.ContractTypeID = ct.ContractTypeID left join Branch b on lb.BranchID = b.BranchID left join Position p on lb.EmployeePositionID = p.PositionID left join LabourContract lc on lb.ParentLabourContractID = lc.LabourContractID where lb.LabourContractID=@LabourContractID;",
+    "FindByStaffAndContractInfo": "select Top 1 * from LabourContract where StaffID = {0} and LabourContractNo = N'{1}';"
+  }
+}

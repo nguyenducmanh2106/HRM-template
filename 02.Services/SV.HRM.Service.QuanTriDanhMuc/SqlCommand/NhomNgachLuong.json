@@ -1,0 +1,9 @@
+{
+  "NhomNgachLuong": {
+    "Proc_Grid": "NhomNgachLuong_Grid",
+    "Proc_Create": "proc_NhomNgachLuong_Create",
+    "Proc_Update": "proc_NhomNgachLuong_Update",
+    "DeleteMany": "DELETE FROM NhomNgachLuong WHERE NhomNgachLuongID IN @recordIDs",
+    "FindById": "select * from NhomNgachLuong WHERE NhomNgachLuongID = @NhomNgachLuongID;"
+  }
+}

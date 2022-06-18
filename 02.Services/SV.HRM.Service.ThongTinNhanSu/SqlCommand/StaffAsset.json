@@ -1,0 +1,9 @@
+﻿{
+  "StaffAsset": {
+    "Proc_Grid": "sp_StaffAsset_Filter_Dynamic", //Chú ý tên Proc_Grid mappings với code base
+    "sp_StaffAsset_CreateOrUpdate": "sp_StaffAsset_CreateOrUpdate",
+    "sp_StaffAsset_GetById": "sp_StaffAsset_GetById",
+    "sp_StaffAsset_DeleteMany": "sp_StaffAsset_DeleteMany",
+    "GetStaffFullNameById": "SELECT FullName FROM Staff WHERE StaffID = @StaffID"
+  }
+}

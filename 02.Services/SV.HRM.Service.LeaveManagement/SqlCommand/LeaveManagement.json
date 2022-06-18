@@ -1,0 +1,16 @@
+{
+  "LeaveManagement": {
+    "Proc_Grid": "LeaveManagement_Grid",
+    "Proc_Create": "proc_LeaveManagement_Create",
+    "Proc_Update": "proc_LeaveManagement_Update",
+    "Proc_Update_Workflow": "proc_LeaveManagement_Workflow_Update",
+    "DeleteMany": "DELETE FROM LeaveManagement WHERE LeaveManagementID IN @recordIDs",
+    "FindById": "select lm.LeaveManagementID, lm.LeaveGroup, lm.FromDate, lm.ToDate, lm.LeaveType, lm.Description, lm.LeaveID, l.LeaveName, lm.UserID, lm.CurrentUserID, lm.PreUserID from LeaveManagement lm left join Leave l on lm.LeaveID = l.LeaveID WHERE lm.LeaveManagementID = @LeaveManagementID;",
+    "CheckDuplicate": "SELECT Top 1 LeaveManagementID FROM LeaveManagement WHERE {0}",
+    "GetWorkflowStateByName": "select * from WorkflowState where WorkflowStateName = @WorkflowStateName;",
+    "GetWorkflowCommandByName": "select * from WorkflowCommand where WorkflowCommandName = @WorkflowCommandName;",
+    "GetWorkflowCommandById": "select * from WorkflowCommand where WorkflowCommandID = @WorkflowCommandId;",
+    "GetUserConfigByUserId": "select uc.UserConfigID, uc.UserID, uc.WorkflowID, wf.WorkflowCode from UserConfig uc left join Workflow wf on uc.WorkflowID = wf.WorkflowID where uc.UserID = @UserId;",
+    "GetRemainDayOfByUser": "select uc.UserID, sc.FromDate, sc.ToDate, wt.WKDate, wt.WKDay from UserConfig uc left join TAStaffCategory sc on uc.StaffID = sc.StaffID left join WKTime wt on sc.TACategoryID = wt.TACategoryID where uc.UserID = @UserID and (((sc.FromDate <= @FromDate) and ((sc.ToDate is null) or (sc.ToDate>=@FromDate))) or ((sc.FromDate>=@FromDate) and (sc.FromDate<=@ToDate))) and ((wt.WKDate>=@FromDate) and (wt.WKDate<=@ToDate));"
+  }
+}

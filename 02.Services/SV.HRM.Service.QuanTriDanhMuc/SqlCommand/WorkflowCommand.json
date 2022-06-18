@@ -1,0 +1,9 @@
+{
+  "WorkflowCommand": {
+    "Proc_Grid": "WorkflowCommand_Grid",
+    "Proc_Create": "proc_WorkflowCommand_Create",
+    "Proc_Update": "proc_WorkflowCommand_Update",
+    "DeleteMany": "DELETE FROM WorkflowCommand WHERE WorkflowCommandID IN @recordIDs",
+    "FindById": "select * from WorkflowCommand WHERE WorkflowCommandID = @WorkflowCommandID;"
+  }
+}

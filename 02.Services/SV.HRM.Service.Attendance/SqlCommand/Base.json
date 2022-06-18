@@ -1,0 +1,11 @@
+{
+  "Base": {
+    "DeleteMany": "DELETE FROM {0} WHERE {1} IN @recordIDs;",
+    "FindById": "SELECT * from {0} WHERE [Status] <> -1 AND {1} = @recordIDs;",
+    "DeleteManyFile": "DELETE FROM HRM_Attachment WHERE Type = @Type AND TypeId in @TypeId;",
+    "GetAttachmentByTypeAndTypeId": "SELECT Id,NodeId,Type,TypeId,Url,Name,PhysicalName,Size,Extension,Url as PhysicalPath FROM HRM_Attachment WHERE Type = @Type AND TypeId = @TypeId;",
+    "CheckDuplicate": "SELECT count(1) FROM {0} WHERE {1}",
+    "GetComboboxByField": "SELECT * FROM {0} WHERE {1} = {2};",
+    "GetComboboxByFieldHasStatusColumn": "SELECT * FROM {0} WHERE {1} = {2} AND [Status] = 1;"
+  }
+}

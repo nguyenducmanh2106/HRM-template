@@ -1,0 +1,12 @@
+﻿{
+  "QuanLySucKhoe": {
+    "Proc_Grid": "QuanLySucKhoe_Grid_Dynamic",
+    "Proc_Create": "proc_QuanLySucKhoe_Create",
+    "Proc_Update": "proc_QuanLySucKhoe_Update",
+    "DeleteMany": "DELETE FROM QuanLySucKhoe WHERE QuanLySucKhoeID IN @recordIDs",
+    "FindById": "select ql.StaffID,s.FullName,ql.HealthPeriodID,hp.HealthPeriodCode,ql.NgayKham,ql.PhamViKham,ql.XepLoaiSucKhoe,CASE ql.XepLoaiSucKhoe WHEN  1 THEN N'Loại 1' WHEN 2 THEN N'Loại 2' WHEN 3 THEN N'Loại 3' WHEN 4 THEN N'Loại 4' WHEN 5 THEN N'Loại 5' ELSE '' END as XepLoaiSucKhoeName,ql.BenhLy,ql.CanhBaoBenhTat,ql.TuVanHuongDan,ql.GhiChu, ql.ChieuCao, ql.CanNang, ql.NhomMau from QuanLySucKhoe ql left join Staff s on ql.StaffID = s.StaffID left join HealthPeriod hp on ql.HealthPeriodID = hp.HealthPeriodID where QuanLySucKhoeID=@QuanLySucKhoeID;",
+    "FindByStaffAndPeriod": "select Top 1 * from QuanLySucKhoe where StaffID = {0} and HealthPeriodID = N'{1}';",
+    "Check_Date_HealthPeriod": "SELECT TOP 1 hp.* FROM History h, HealthPeriod hp where h.StaffID = {0} AND h.ExtraLogic2 <> 1 AND hp.HealthPeriodID = {1} AND ((h.Todate is null and '{2}' between FORMAT(h.FromDate,'yyyy-MM-dd') AND FORMAT(GETDATE(),'yyyy-MM-dd')) or (h.Todate is not null and '{2}' between FORMAT(h.FromDate,'yyyy-MM-dd') AND FORMAT(h.Todate,'yyyy-MM-dd'))) AND ('{2}' BETWEEN FORMAT(hp.FromDate,'yyyy-MM-dd') AND FORMAT(hp.ToDate,'yyyy-MM-dd'))",
+    "Check_HealthPeriod_History": "select TOP 1 hp.* from HealthPeriod hp ,History h WHERE h.StaffID = {0} AND hp.HealthPeriodID = {1} AND ((h.FromDate is not null AND FORMAT(h.FromDate,'yyyy-MM-dd') between FORMAT(hp.FromDate,'yyyy-MM-dd') AND FORMAT(hp.ToDate,'yyyy-MM-dd')) OR (h.Todate is null AND FORMAT(hp.FromDate,'yyyy-MM-dd') between FORMAT(h.FromDate,'yyyy-MM-dd') AND FORMAT(GETDATE(),'yyyy-MM-dd')) OR (h.Todate is NOT null AND FORMAT(hp.FromDate,'yyyy-MM-dd') between FORMAT(h.FromDate,'yyyy-MM-dd') AND FORMAT(H.Todate,'yyyy-MM-dd')))"
+  }
+}

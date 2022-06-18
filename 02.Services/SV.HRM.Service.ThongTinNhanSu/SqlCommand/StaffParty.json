@@ -1,0 +1,11 @@
+{
+  "StaffParty": {
+    "Proc_Grid": "Staff_Party_Grid_Dynamic",
+    "Proc_Create": "proc_StaffParty_Create",
+    "Proc_Update": "proc_StaffParty_Update",
+    "DeleteMany": "DELETE FROM StaffParty WHERE StaffPartyID IN @recordIDs",
+    "FindById": "select sp.StaffPartyID,sp.StaffID,sp.LyLuanChinhTri,sp.TuNgay,sp.DenNgay,sp.ChucVuDangID,pt.PartyTitleName,sp.ChiBoID,pc.PartyCellName,sp.NgheNghiepTruocKhiVaoDang,sp.NgayVaoDang,sp.NgayVaoDangChinhThuc,sp.NoiKetNapDang,sp.NoiCongNhan,sp.SoLiLich,sp.SoTheDangVien,sp.GhiChu,sp.NgayChuyenDen,sp.NoiChuyenDen,sp.NgayChuyenDi,sp.NoiChuyenDi,sp.NgayBiChet,sp.LyDoChet,sp.NgayRaKhoiDang,sp.HinhThucRaKhoiDang from StaffParty sp left join PartyCell pc on sp.ChiBoID = pc.PartyCellID left join PartyTitle pt on sp.ChucVuDangID = pt.PartyTitleID where StaffPartyID=@StaffPartyID",
+    "FirstOrDefaultByStaffID": "select TOP(1) StaffPartyID,NgheNghiepTruocKhiVaoDang,NgayVaoDang,NgayVaoDangChinhThuc,NoiKetNapDang,NoiCongNhan,SoLiLich,SoTheDangVien,GhiChu,NgayChuyenDen,NoiChuyenDen,NgayChuyenDi,NoiChuyenDi,NgayBiChet,LyDoChet,NgayRaKhoiDang,HinhThucRaKhoiDang from StaffParty where StaffID=@StaffID",
+    "FindByStaffAndTime": "select TOP(1) StaffPartyID,ChiBoID,ChucVuDangID,TuNgay,DenNgay,NgheNghiepTruocKhiVaoDang,NgayVaoDang,NgayVaoDangChinhThuc,NoiKetNapDang,NoiCongNhan,SoLiLich,SoTheDangVien,GhiChu,NgayChuyenDen,NoiChuyenDen,NgayChuyenDi,NoiChuyenDi,NgayBiChet,LyDoChet,NgayRaKhoiDang,HinhThucRaKhoiDang from StaffParty where StaffID=@StaffID and TuNgay=@FromDate and DenNgay=@ToDate"
+  }
+}

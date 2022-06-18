@@ -1,0 +1,10 @@
+{
+  "Holiday": {
+    "Proc_Grid": "Holiday_Grid",
+    "Proc_Create": "proc_Holiday_Create",
+    "Proc_Update": "proc_Holiday_Update",
+    "DeleteMany": "DELETE FROM Holiday WHERE HolidayID IN @recordIDs",
+    "FindById": "select * from Holiday WHERE HolidayID = @HolidayID;",
+    "CheckDuplicate": "SELECT Top 1 HolidayID FROM Holiday WHERE {0}"
+  }
+}

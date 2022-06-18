@@ -1,0 +1,11 @@
+{
+  "DisciplineDetail": {
+    "Proc_Grid": "DisciplineDetail_Grid_Dynamic",
+    "Proc_Create": "proc_DisciplineDetail_Create",
+    "Proc_Update": "proc_DisciplineDetail_Update",
+    "DeleteMany": "DELETE FROM DisciplineDetail WHERE StaffMilitaryID IN @recordIDs",
+    "FindById": "select dd.DisciplineDetailID,dd.PeriodID,dt.DisciplineTypeID,md.MucDoViPhamKyLuatID,dd.StaffID,s.FullName,dd.DisciplineDate,dd.DecisionNo,dt.Description1,md.MucDoViPhamKyLuatName,dd.EffectiveFrom,dd.EffectiveTo,dd.Note,dd.CompensationLevel,dd.CompensationMode from DisciplineDetail dd left join DisciplineType dt on dd.DisciplineTypeID = dt.DisciplineTypeID left join MucDoViPhamKyLuat md on dd.PeriodID = md.MucDoViPhamKyLuatID left join Staff s on dd.StaffID = s.StaffID WHERE DisciplineDetailID = @DisciplineDetailID;",
+    "FindByStaffAndDecisionNo": "select Top 1 * from DisciplineDetail where StaffID = {0} and DecisionNo = N'{1}';",
+    "Check_Staff_Discipline_In_History": "select top 1 h.* from History h where h.StaffID = {0} AND h.Status <> 4 AND ((h.FromDate is not null and ('{1}' >= FORMAT(h.FromDate,'yyyy-MM-dd')) AND ((h.Todate is null and '{1}' <= FORMAT(GETDATE(),'yyyy-MM-dd') ) or ('{1}' <= FORMAT(h.Todate,'yyyy-MM-dd')))))"
+  }
+}

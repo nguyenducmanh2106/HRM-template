@@ -1,0 +1,9 @@
+{
+  "StaffDocument": {
+    "Proc_Grid": "StaffLicense_Grid_Dynamic",
+    "Proc_Create": "StaffLicense_Create",
+    "Proc_Update": "StaffLicense_Update",
+    "DeleteMany": "DELETE FROM StaffLicense WHERE DecisionID IN @recordIDs",
+    "FindById": "select * from StaffLicense where StaffLicenseID = @StaffLicenseID"
+  }
+}

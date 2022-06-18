@@ -1,0 +1,9 @@
+{
+  "DisciplineType": {
+    "Proc_Grid": "DisciplineType_Grid",
+    "Proc_Create": "proc_DisciplineType_Create",
+    "Proc_Update": "proc_DisciplineType_Update",
+    "DeleteMany": "DELETE FROM DisciplineType WHERE DisciplineTypeID IN @recordIDs",
+    "FindById": "select * from DisciplineType WHERE DisciplineTypeID = @DisciplineTypeID;"
+  }
+}

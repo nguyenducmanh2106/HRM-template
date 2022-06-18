@@ -1,0 +1,9 @@
+﻿{
+  "Reward": {
+    "Proc_Grid": "Reward_Grid_Dynamic",
+    "Proc_Create": "proc_StaffReward_Create",
+    "Proc_Update": "proc_StaffReward_Update",
+    "DeleteMany": "DELETE FROM StaffReward WHERE StaffRewardID IN @recordIDs",
+    "FindById": "SELECT T.StaffRewardID,T.StaffCode,T.RewardName,T.Note,T.FullName,T.StaffID,T.CompanyID,T.CompanyName,T.DeptID,T.RewardDecisionNo,T.RewardDate,T.RewardID,T.RewardType,T.FromYear,T.ToYear,T.RewardTypeName from (SELECT CASE sr.RewardType WHEN 1 THEN N'Khen thưởng cá nhân' WHEN 2 THEN N'Khen thưởng phòng ban' WHEN 3 THEN N'Khen thưởng chi nhánh' WHEN 4 THEN N'Khen thưởng công ty' ELSE '' END as RewardTypeName,sr.StaffID,sr.StaffRewardID,sr.Note,s.StaffCode,s.FullName,sr.CompanyID,c.CompanyName,sr.DeptID,r.RewardName,sr.RewardDecisionNo,sr.RewardDate,sr.RewardID,sr.RewardType,sr.FromYear,sr.ToYear,(row_number() over (PARTITION BY sr.StaffRewardID order by h.FromDate desc)) as row_num FROM StaffReward sr LEFT JOIN Staff s ON sr.StaffID = s.StaffID LEFT JOIN Reward r ON sr.RewardID = r.RewardID LEFT JOIN History h ON s.StaffID = h.StaffID  LEFT JOIN Company c on sr.CompanyID = c.CompanyID WHERE StaffRewardID = @StaffRewardID) as T where T.row_num = 1;"
+  }
+}

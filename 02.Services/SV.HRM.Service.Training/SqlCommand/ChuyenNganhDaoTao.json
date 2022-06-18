@@ -1,0 +1,9 @@
+{
+  "ChuyenNganhDaoTao": {
+    "Proc_Grid": "ChuyenNganhDaoTao_Grid",
+    "Proc_Create": "proc_ChuyenNganhDaoTao_Create",
+    "Proc_Update": "proc_ChuyenNganhDaoTao_Update",
+    "DeleteMany": "DELETE FROM ChuyenNganhDaoTao WHERE ChuyenNganhDaoTaoID IN @recordIDs",
+    "FindById": "select * from ChuyenNganhDaoTao WHERE ChuyenNganhDaoTaoID = @ChuyenNganhDaoTaoID;"
+  }
+}
